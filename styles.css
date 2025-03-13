@@ -7,6 +7,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
+    overflow: hidden;
 }
 
 /* Main container for the cards */
@@ -55,4 +56,21 @@ body {
 /* Show text only when active */
 .panel.active .img-text {
     opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: 100vh;
+    }
+    
+    .panel {
+        width: 90%;
+        height: 15vh;
+    }
+
+    .panel.active {
+        height: 40vh;
+    }
 }
